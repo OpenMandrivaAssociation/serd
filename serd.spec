@@ -1,16 +1,15 @@
-Name:           serd
-Version:        0.4.2
-Release:        %mkrel 1
-Summary:        Lightweight RDF syntax library
-
 %define lib_major       0
 %define lib_name        %mklibname %{name} %{lib_major}
 %define lib_name_devel  %mklibname %{name} -d
 
+Name:           serd
+Version:        0.4.2
+Release:        %mkrel 1
+Group:          System/Libraries
+Summary:        Lightweight RDF syntax library
 Source:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
 URL:            http://drobilla.net/software/%{name}/
 License:        ISC
-Group:          System/Libraries
 
 BuildRequires:  waf, pkgconfig
 
