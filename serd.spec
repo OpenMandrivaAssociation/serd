@@ -9,7 +9,7 @@ Summary:        Lightweight RDF syntax library
 
 Source:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
 URL:            http://drobilla.net/software/
-License:        ISC
+License:        MIT
 Group:          System/Libraries
 
 BuildRequires:  waf, pkgconfig
@@ -63,7 +63,7 @@ Requires:       pkgconfig
 Provides:       %{name}-devel = %{version}-%{release}
 
 %description -n %{lib_name_devel}
-Development files needed to build applications against libffado.
+Development files needed to build applications against serd.
 
 %files -n %{lib_name_devel}
 %defattr(-,root,root,-)
