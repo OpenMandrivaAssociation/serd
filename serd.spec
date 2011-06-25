@@ -22,6 +22,11 @@ performance critical applications, or situations where a simple
 reader/writer with minimal dependencies is ideal
 (e.g. in LV2 hosts or plugins).
 
+%files -n %{name}
+%defattr(-,root,root,-)
+%doc %{_mandir}/man1/serdi.*
+%{_bindir}/serdi
+
 #-----------------------------------
 %package -n %{lib_name}
 
@@ -39,20 +44,6 @@ reader/writer with minimal dependencies is ideal
 %files -n %{lib_name}
 %defattr(-,root,root,-)
 %{_libdir}/lib%{name}-%{lib_major}.so.*
-
-#-----------------------------------
-%package -n %{name}
-Summary:        Utility for the Lightweight RDF syntax library
-Group:          System/Libraries
-Requires:       %{lib_name} = %{version}-%{release}
-
-%description -n %{name}
-Utility for the serd lightweight C library for RDF syntax
-
-%files -n %{name}
-%defattr(-,root,root,-)
-%doc %{_mandir}/man1/serdi.*
-%{_bindir}/serdi
 
 #-----------------------------------
 %package -n %{lib_name_devel}
