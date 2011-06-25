@@ -8,7 +8,7 @@ Summary:        Lightweight RDF syntax library
 %define lib_name_devel  %mklibname %{name} -d
 
 Source:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
-URL:            http://drobilla.net/software/%{name}/
+URL:            http://drobilla.net/software/
 License:        ISC
 Group:          System/Libraries
 
