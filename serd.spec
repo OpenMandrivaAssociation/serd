@@ -1,5 +1,5 @@
 Name:           serd
-Version:        0.14.0
+Version:        0.18.0
 Release:        %mkrel 1
 Summary:        Lightweight RDF syntax library
 
