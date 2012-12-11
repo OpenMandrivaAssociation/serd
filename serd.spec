@@ -79,3 +79,22 @@ rm -rf %{buildroot}
 %clean
 rm -rf %{buildroot}
 
+
+
+%changelog
+* Sat Aug 25 2012 Frank Kober <emuse@mandriva.org> 0.18.0-1mdv2012.0
++ Revision: 815732
+- new version 0.18.0
+
+* Mon Apr 23 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.14.0-1
++ Revision: 792788
+- version update 0.14.0
+
+* Sun Oct 23 2011 Frank Kober <emuse@mandriva.org> 0.5.0-1
++ Revision: 705724
+- new version 0.5.0
+
+* Sat Jun 25 2011 Frank Kober <emuse@mandriva.org> 0.4.2-1
++ Revision: 687116
+- imported package serd
+
