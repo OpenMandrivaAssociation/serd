@@ -1,4 +1,5 @@
 removed_sources:
   serd-0.18.0.tar.bz2: d8bcf81631196d814cfea018101fc64745e334e3
-sources:
   serd-0.18.2.tar.bz2: 9472be8d6f407affca5c8fa3125a5fbe49af967e
+sources:
+  serd-0.20.0.tar.bz2: 38c0c8600270e38d99bc87b0ceb14b25c4c0cea3
