@@ -77,6 +77,6 @@ sed -i "/ldconfig/d" wscript
 
 %install
 
-./waf install --destdir=%{buildroot}
+%{__python2} ./waf install --destdir=%{buildroot}
 
 %clean
