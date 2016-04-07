@@ -2,7 +2,7 @@
 
 Name:           serd
 Version:        0.22.0
-Release:        1
+Release:        2
 Summary:        Lightweight RDF syntax library
 
 %define lib_major       0
@@ -68,10 +68,12 @@ Development files needed to build applications against serd.
 #-----------------------------------
 %prep
 %setup -q
+# remove ldconfig
+sed -i "/ldconfig/d" wscript
 
 %build
-./waf configure --prefix=%{_prefix} --mandir=%{_mandir} --libdir=%{_libdir}
-./waf
+%{__python2} ./waf configure --prefix=%{_prefix} --mandir=%{_mandir} --libdir=%{_libdir} CC=%{__cc}
+%{__python2} ./waf CC=%{__cc}
 
 %install
 
