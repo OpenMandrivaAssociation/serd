@@ -2,7 +2,7 @@
 
 Name:           serd
 Version:        0.24.0
-Release:        1
+Release:        2
 Summary:        Lightweight RDF syntax library
 
 %define lib_major       0
