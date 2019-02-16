@@ -14,7 +14,7 @@ URL:            http://drobilla.net/software/serd/
 License:        MIT
 Group:          System/Libraries
 
-BuildRequires:  waf, pkgconfig
+BuildRequires:  waf pkgconfig
 
 %description
 Lightweight C library for RDF syntax which supports reading
@@ -72,11 +72,9 @@ Development files needed to build applications against serd.
 sed -i "/ldconfig/d" wscript
 
 %build
-%{__python2} ./waf configure --prefix=%{_prefix} --mandir=%{_mandir} --libdir=%{_libdir} CC=%{__cc}
-%{__python2} ./waf CC=%{__cc}
+python ./waf configure --prefix=%{_prefix} --mandir=%{_mandir} --libdir=%{_libdir} CC=%{__cc}
+python ./waf CC=%{__cc}
 
 %install
 
-%{__python2} ./waf install --destdir=%{buildroot}
-
-%clean
+python ./waf install --destdir=%{buildroot}
