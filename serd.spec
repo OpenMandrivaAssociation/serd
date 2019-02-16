@@ -2,7 +2,7 @@
 
 Name:           serd
 Version:        0.30.0
-Release:        1
+Release:        2
 Summary:        Lightweight RDF syntax library
 
 %define lib_major       0
@@ -10,7 +10,7 @@ Summary:        Lightweight RDF syntax library
 %define lib_name_devel  %mklibname %{name} -d
 
 Source0:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
-URL:            http://drobilla.net/software/
+URL:            http://drobilla.net/software/serd/
 License:        MIT
 Group:          System/Libraries
 
