@@ -1,7 +1,7 @@
 %define debug_package %nil
 
 Name:           serd
-Version:	0.30.8
+Version:	0.30.10
 Release:	1
 Summary:        Lightweight RDF syntax library
 
