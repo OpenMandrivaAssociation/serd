@@ -1,3 +1,6 @@
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
 Name:           serd
 Version:	0.30.10
 Release:	1
