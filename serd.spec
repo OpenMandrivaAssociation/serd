@@ -1,5 +1,3 @@
-%define debug_package %nil
-
 Name:           serd
 Version:	0.30.10
 Release:	1
