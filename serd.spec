@@ -14,6 +14,7 @@ Source0:         http://download.drobilla.net/%{name}-%{version}.tar.xz
 URL:            http://drobilla.net/software/serd/
 License:        MIT
 Group:          System/Libraries
+BuildRequires:  doxygen
 BuildRequires:  meson
 BuildRequires:  waf pkgconfig
 
