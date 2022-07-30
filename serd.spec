@@ -14,8 +14,10 @@ Source0:         http://download.drobilla.net/%{name}-%{version}.tar.xz
 URL:            http://drobilla.net/software/serd/
 License:        MIT
 Group:          System/Libraries
-
+BuildRequires:  doxygen
+BuildRequires:  meson
 BuildRequires:  waf pkgconfig
+BuildRequires:  python3dist(sphinx)
 
 %description
 Lightweight C library for RDF syntax which supports reading
@@ -28,6 +30,7 @@ reader/writer with minimal dependencies is ideal
 %files -n %{name}
 %defattr(-,root,root,-)
 %doc %{_mandir}/man1/serdi.*
+%doc %{_datadir}/doc/serd-0/
 %{_bindir}/serdi
 
 #-----------------------------------
@@ -69,13 +72,8 @@ Development files needed to build applications against serd.
 #-----------------------------------
 %prep
 %setup -q
-# remove ldconfig
-#sed -i "/ldconfig/d" wscript
-
-%build
-python ./waf configure --prefix=%{_prefix} --mandir=%{_mandir} --libdir=%{_libdir} CC=%{__cc}
-python ./waf CC=%{__cc}
+%meson
+%meson_build
 
 %install
-
-python ./waf install --destdir=%{buildroot}
+%meson_install
