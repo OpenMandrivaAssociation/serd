@@ -17,6 +17,7 @@ Group:          System/Libraries
 BuildRequires:  doxygen
 BuildRequires:  meson
 BuildRequires:  waf pkgconfig
+BuildRequires:  python3dist(sphinx)
 
 %description
 Lightweight C library for RDF syntax which supports reading
