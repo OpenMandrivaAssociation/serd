@@ -14,7 +14,7 @@ Source0:         http://download.drobilla.net/%{name}-%{version}.tar.xz
 URL:            http://drobilla.net/software/serd/
 License:        MIT
 Group:          System/Libraries
-
+BuildRequires:  meson
 BuildRequires:  waf pkgconfig
 
 %description
@@ -69,13 +69,8 @@ Development files needed to build applications against serd.
 #-----------------------------------
 %prep
 %setup -q
-# remove ldconfig
-#sed -i "/ldconfig/d" wscript
-
-%build
-python ./waf configure --prefix=%{_prefix} --mandir=%{_mandir} --libdir=%{_libdir} CC=%{__cc}
-python ./waf CC=%{__cc}
+%meson
+%meson_build
 
 %install
-
-python ./waf install --destdir=%{buildroot}
+%meson_install
