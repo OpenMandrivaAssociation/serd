@@ -10,7 +10,7 @@ Summary:        Lightweight RDF syntax library
 %define lib_name        %mklibname %{name} %{lib_major}
 %define lib_name_devel  %mklibname %{name} -d
 
-Source0:         http://download.drobilla.net/%{name}-%{version}.tar.bz2
+Source0:         http://download.drobilla.net/%{name}-%{version}.tar.xz
 URL:            http://drobilla.net/software/serd/
 License:        MIT
 Group:          System/Libraries
