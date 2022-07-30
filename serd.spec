@@ -70,7 +70,7 @@ Development files needed to build applications against serd.
 %prep
 %setup -q
 # remove ldconfig
-sed -i "/ldconfig/d" wscript
+#sed -i "/ldconfig/d" wscript
 
 %build
 python ./waf configure --prefix=%{_prefix} --mandir=%{_mandir} --libdir=%{_libdir} CC=%{__cc}
