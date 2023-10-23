@@ -29,8 +29,6 @@ reader/writer with minimal dependencies is ideal
 
 %files -n %{name}
 %defattr(-,root,root,-)
-%doc %{_mandir}/man1/serdi.*
-%doc %{_datadir}/doc/serd-0/
 %{_bindir}/serdi
 
 #-----------------------------------
