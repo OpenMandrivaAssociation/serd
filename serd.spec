@@ -74,7 +74,8 @@ Development files needed to build applications against serd.
 %setup -q
 %meson  \
         -Dman=disabled \
-        -Dman_html=disabled
+        -Dman_html=disabled \
+        -Ddocs=disabled
 %meson_build
 
 %install
