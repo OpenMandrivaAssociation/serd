@@ -2,16 +2,16 @@
 %global _empty_manifest_terminate_build 0
 
 Name:           serd
-Version:	0.30.16
-Release:	2
+Version:	0.32.0
+Release:	1
 Summary:        Lightweight RDF syntax library
 
 %define lib_major       0
 %define lib_name        %mklibname %{name} %{lib_major}
 %define lib_name_devel  %mklibname %{name} -d
 
-Source0:         http://download.drobilla.net/%{name}-%{version}.tar.xz
-URL:            http://drobilla.net/software/serd/
+Source0:        https://download.drobilla.net/%{name}-%{version}.tar.xz
+URL:            https://drobilla.net/software/serd/
 License:        MIT
 Group:          System/Libraries
 BuildRequires:  doxygen
@@ -29,8 +29,6 @@ reader/writer with minimal dependencies is ideal
 
 %files -n %{name}
 %defattr(-,root,root,-)
-%doc %{_mandir}/man1/serdi.*
-%doc %{_datadir}/doc/serd-0/
 %{_bindir}/serdi
 
 #-----------------------------------
@@ -72,7 +70,10 @@ Development files needed to build applications against serd.
 #-----------------------------------
 %prep
 %setup -q
-%meson
+%meson  \
+        -Dman=disabled \
+        -Dman_html=disabled \
+        -Ddocs=disabled
 %meson_build
 
 %install
