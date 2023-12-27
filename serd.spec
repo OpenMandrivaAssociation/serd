@@ -3,11 +3,12 @@
 
 Name:           serd
 Version:	0.32.0
-Release:	1
+Release:	2
 Summary:        Lightweight RDF syntax library
 
 %define lib_major       0
-%define lib_name        %mklibname %{name} %{lib_major}
+%define lib_name        %mklibname %{name}
+%define oldlib_name        %mklibname %{name} 0
 %define lib_name_devel  %mklibname %{name} -d
 
 Source0:        https://download.drobilla.net/%{name}-%{version}.tar.xz
@@ -36,6 +37,7 @@ reader/writer with minimal dependencies is ideal
 
 Summary:        Lightweight RDF syntax library
 Group:          System/Libraries
+%rename %{oldlib_name}
 
 %description -n %{lib_name}
 Lightweight C library for RDF syntax which supports reading
