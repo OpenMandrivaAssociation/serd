@@ -2,7 +2,7 @@
 %global _empty_manifest_terminate_build 0
 
 Name:           serd
-Version:	0.32.4
+Version:	0.32.6
 Release:	1
 Summary:        Lightweight RDF syntax library
 
